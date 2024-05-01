@@ -1,0 +1,17 @@
+class Solution:
+    def deleteK(self, head, k):
+        #code here  
+        if k==1: return None
+        l = 1
+        curr = head
+        prev = None
+        while(curr):
+            if l%k==0:
+                prev.next = curr.next
+            l+=1
+            prev = curr
+            curr = curr.next
+        return head
+
+link: https://www.geeksforgeeks.org/problems/remove-every-kth-node/1
+                
